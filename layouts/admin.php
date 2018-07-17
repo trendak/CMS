@@ -12,6 +12,11 @@
 <body>
 	<a href="index.php?v=categories">Kategorie</a>
 	<a href="index.php?v=posts">Posty</a>
+	<?php 
+		if (isset($_SESSION['loged'])) {
+			echo '<a href="?logout=1">Wyloguj</a>';
+		}
+	 ?>
 <hr>
 	<div class="container">
 		<?php echo $content;  ?>
