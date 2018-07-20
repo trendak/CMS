@@ -88,10 +88,22 @@ body{
   padding-top: 20px;
 }
 
-/* Breadcrumb */
 .breadcrumb{
   background:#cccccc;
   color:#333333;
+}
+
+.alertsucces{
+  border-color: #d6e9c6;
+  color: #3c763d;
+  margin-top: 10px;
+  margin-bottom: 10px;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: #FFFFFF;
+    padding: 15px;
+ 
 }
 
 .breadcrumb a{
