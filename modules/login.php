@@ -26,6 +26,9 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 		$result->bindParam(':last_ip', $_SERVER['REMOTE_ADDR']);
 		$result->bindParam(':id', $login['id']);
 		$result->execute();
+    //licznik stron aktualizowany przy lgoowaniu
+      howManyRecords();
+
 	} else {
 		$_SESSION['error'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';
 

@@ -3,7 +3,7 @@ if(isset($_POST['name'])){
 	$result = $pdo->prepare('INSERT INTO categories (name) VALUES (:name)');
 	$result->bindParam(':name', $_POST['name']);
 	$result->execute();
-
+    howManyRecords();
 	header('location: index.php?v=categories');
 }
 

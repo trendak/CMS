@@ -96,17 +96,24 @@ if (isset($_SESSION['communique'])) {
               <a href="index.html" class="list-group-item active main-color-bg">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
               </a>
-              <a href="pages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge">12</span></a>
-              <a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Posts <span class="badge">36</span></a>
-              <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge">1</span></a>
+              <a href="pages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge"><?php echo $_SESSION['pages'] ?></span></a>
+              <a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Posts <span class="badge"><?php echo $_SESSION['posts'] ?></span></a>
+              <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge"><?php echo $_SESSION['users'] ?></span></a>
             </div>
 
             <div class="well">
               <h4>Disk Space Used</h4>
               <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                      60%
-              </div>
+
+                   <?php
+                      $freesize = disk_free_space("/") / disk_total_space("/");
+                      $freesize = round($freesize, 2);
+                      echo '<div class="progress-bar" role="progressbar" aria-valuenow="' .  $freesize * 100 . '" aria-valuemin="0" aria-valuemax="100" style="width: ' .  $freesize * 100 . '%;">';
+                      echo $freesize * 100 . "%";
+                      echo ' </div>';
+
+                   ?>
+
             </div>
             <h4>Bandwidth Used </h4>
             <div class="progress">
