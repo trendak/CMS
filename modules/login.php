@@ -10,6 +10,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 	$login = htmlentities($login, ENT_QUOTES, "UTF-8");
 
 	$password = htmlentities($password, ENT_QUOTES, "UTF-8");
+	$password = hash('sha256', $password);
 	$result = $pdo->prepare('SELECT * FROM users WHERE login = :login AND password = :password');
 	$result->bindParam('login', $login);
 	$result->bindParam('password', $password);

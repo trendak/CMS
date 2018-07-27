@@ -11,6 +11,7 @@ if (array_key_exists('v', $_GET)) {
 } else {
 	$module = 'categories';
 }
+
 $moduleDir = 'modules/' . $module . '.php';
 
 if (file_exists($moduleDir)) {
@@ -18,8 +19,15 @@ if (file_exists($moduleDir)) {
 	include $moduleDir;
 	$content = ob_get_contents();
 	ob_end_clean();
+    if (isset($_SESSION['admin']))
+    {
+        include 'layouts/admin.php';
+    }
+    else{
+        include 'layouts/user.php';
+    }
 
-	include 'layouts/admin.php';
+
 } else {
 	header("HTTP/1.1 404 Not Found");
 }

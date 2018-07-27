@@ -28,15 +28,15 @@ if (!isset($_GET['id'])) {
 
  ?>
 <form method="POST">
-	<div class="form-control">
+	<div class="form-group">
 		<label for="Nazwa kategorii">Tytuł</label>
 		<input type="text" name="title" value="<?php echo $post['title'] ?>" class="form-control">
 	</div>
-	<div class="form-control">
+	<div class="form-group">
 		<label for="Nazwa kategorii">Treść</label>
 		<textarea name="body" cols="30" rows="10"  class="form-control"><?php echo $post['body'] ?></textarea> 
 	</div>
-		<div class="form-control">
+		<div class="form-group">
 		<label for="Nazwa kategorii">Kategoria</label>
 		<select name="category_id" id="" value="<?php echo $category['name'] ?>" class="form-control">
 		<?php
@@ -57,7 +57,7 @@ if (!isset($_GET['id'])) {
 		</select>
 		
 	</div>
-		<div class="form-control">
+		<div class="form-group">
 			<button class="btn btn-primary">Zapisz</button>
 		</div>	
 </form>

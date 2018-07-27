@@ -96,9 +96,9 @@ if (isset($_SESSION['communique'])) {
               <a href="index.html" class="list-group-item active main-color-bg">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
               </a>
-              <a href="pages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge"><?php echo $_SESSION['pages'] ?></span></a>
-              <a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Posts <span class="badge"><?php echo $_SESSION['posts'] ?></span></a>
-              <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge"><?php echo $_SESSION['users'] ?></span></a>
+              <a href="?v=pages" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge"><?php echo $_SESSION['pages'] ?></span></a>
+              <a href="?v=posts" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Posts <span class="badge"><?php echo $_SESSION['posts'] ?></span></a>
+              <a href="?v=users" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge"><?php echo $_SESSION['users'] ?></span></a>
             </div>
 
             <div class="well">
@@ -153,7 +153,8 @@ include 'modules/add_post.php';
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.slim.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
