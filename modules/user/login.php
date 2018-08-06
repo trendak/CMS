@@ -1,6 +1,5 @@
-<h1>Logowanie</h1>
 <?php
-
+if (isset($_SESSION['error']))
 unset($_SESSION['error']);
 if (isset($_POST['login']) && isset($_POST['password'])) {
 	$login = $_POST['login'];
@@ -19,6 +18,10 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 	if ($login) {
 		$_SESSION['loged'] = true;
 		$_SESSION['login'] = $login['login'];
+		if ($login['admin'])
+		{
+			$_SESSION['admin'] = true;
+		}
 		unset($_SESSION['error']);
 		$result->closeCursor();
 		$result = $pdo->prepare('UPDATE users SET last_login_date= :last_login_date, last_ip = :last_ip WHERE id = :id');
@@ -42,22 +45,3 @@ if (isset($_GET['logout']) == 1) {
 }
 
 ?>
-<form method="POST">
-	<?php
-if (isset($_SESSION['error'])) {
-	echo $_SESSION['error'];
-}
-
-?>
-	<div class="">
-		<label for="login">Login</label>
-		<input type="text" name="login" class="">
-	</div>
-	<div class="">
-		<label for="Nazwa kategorii">Hasło</label>
-		<input type="password" name="password" class="">
-	</div>
-	<div class="">
-			<button class="btn btn-primary">Zaloguj</button>
-		</div>
-</form>

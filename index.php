@@ -9,10 +9,22 @@ session_start();
 if (array_key_exists('v', $_GET)) {
 	$module = $_GET['v'];
 } else {
-	$module = 'categories';
+    if (isset($_SESSION['admin']))
+	$module = 'posts';
+    else{
+        $module = 'home';
+    }
 }
+if (isset($_SESSION['admin']))
+{
+    if ($_SESSION['admin'] == true)
+        $moduleDir = 'modules/admin/' . $module . '.php';
+    else
+        $moduleDir = 'modules/user/' . $module . '.php';
+}
+else
+    $moduleDir = 'modules/user/' . $module . '.php';
 
-$moduleDir = 'modules/' . $module . '.php';
 
 if (file_exists($moduleDir)) {
 	ob_start();
@@ -23,7 +35,7 @@ if (file_exists($moduleDir)) {
     {
         include 'layouts/admin.php';
     }
-    else{
+    elseif(!isset($_SESSION['admin']) || $_SESSION['admin'] == false){
         include 'layouts/user.php';
     }
 
@@ -32,12 +44,15 @@ if (file_exists($moduleDir)) {
 	header("HTTP/1.1 404 Not Found");
 }
 
-//wylogowanie
 if (isset($_GET['logout']) == 1) {
-	$_SESSION['loged'] = false;
-	session_destroy();
-	$page = $_SERVER['PHP_SELF'];
-	$sec = "0";
-	header("Refresh: $sec; url=$page");
+
+
+    @session_destroy();
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "0";
+    if (isset($_SESSION['admin'])){
+        $_SESSION['admin'] = false;
+    }
+    header('location: index.php');
 }
 ?>

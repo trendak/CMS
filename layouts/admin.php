@@ -139,8 +139,8 @@ if (isset($_SESSION['communique'])) {
 
     <!-- Add Page -->
 <?php
-include 'modules/add_page.php';
-include 'modules/add_post.php';
+include 'modules/admin/add_page.php';
+include 'modules/admin/add_post.php';
 ?>
 
 

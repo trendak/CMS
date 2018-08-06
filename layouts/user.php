@@ -1,9 +1,17 @@
 <?php
-$result = $pdo->query('SELECT users.*, categories.name AS categoryname, posts.* FROM `posts` LEFT JOIN categories ON posts.category_id = categories.id LEFT JOIN users ON posts.user_id = users.id');
-$posts = $result->fetchAll();
+
+$result = $pdo->query('SELECT * FROM pages');
+$pages = $result->fetchAll();
+if (!isset($_SESSION['login']))
+include_once('modules/user/login.php');
+if (isset($_GET['logout']) == 1) {
 
 
-
+    @session_destroy();
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "0";
+    header('location: index.php');
+}
 ?>
 
 
@@ -12,7 +20,7 @@ $posts = $result->fetchAll();
 
 <head>
 
-  <meta charset="utf-8">
+  <meta charset="utf-8 ">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -23,7 +31,7 @@ $posts = $result->fetchAll();
   <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -37,26 +45,35 @@ $posts = $result->fetchAll();
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand" href="index.html">Blog</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="post.html">Sample Post</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        <li class="nav-item"><a href="" class="nav-link">Login</a></li>
+
+          <?php
+          foreach ($pages as $page) {
+              ?>
+
+            <li class="nav-item">
+              <a class="nav-link" href="?p=title"><?php echo $page['title']; ?></a>
+            </li>
+              <?php
+          }
+          if (isset($_SESSION['login']))
+          {
+            echo '<li class="nav-item"> <a href="" class="nav-link">' . $_SESSION['login'] . '</a></li>';
+              echo '<li class="nav-item"> <a href="?logout=1"" class="nav-link">Wyloguj się</a></li>';
+          }
+          else{
+            echo '<li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#login">Login</a></li>';
+              echo '<li class="nav-item"> <a href="?v=register"" class="nav-link">Zarejestruj się</a></li>';
+          }
+        ?>
+
+
       </ul>
     </div>
   </div>
@@ -80,36 +97,7 @@ $posts = $result->fetchAll();
 <!-- Main Content -->
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-
-        <?php
-
-        foreach($posts as $post)
-        {
-        ?>
-      <div class="post-preview">
-        <a href="?v=post&id=<?php echo $post['id'] ?>">
-          <h2 class="post-title">
-              <?php echo $post['title'] ?>
-          </h2>
-
-        </a>
-        <p><?php echo $post['body'] ?></p>
-        <p class="post-meta">Posted by
-          <a href="#"><?php echo $post['login'] ?></a>
-          on <?php echo $post['created_date'] ?></p>
-      </div>
-      <hr>
-      <?php
-      }
-      ?>
-
-      <!-- Pager -->
-      <div class="clearfix">
-        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-      </div>
-    </div>
-  </div>
+      <?php echo $content; ?>
 </div>
 
 <hr>
@@ -151,6 +139,53 @@ $posts = $result->fetchAll();
   </div>
 </footer>
 
+<?php
+
+if(!(isset($_SESSION['login'])) && (!($_GET['v'] == 'register'))) {
+    ?>
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+       aria-hidden="true">
+    <div class=" modal-dialog modal-dialog-centered " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form method="POST">
+          <div class="modal-body text-center">
+
+              <?php
+              if (isset($_SESSION['error'])) {
+                  echo $_SESSION['error'];
+              }
+
+
+              ?>
+            <div class="form-group">
+              <label for="login">Login</label>
+              <input type="text" name="login" class="">
+            </div>
+
+            <div class="form-group">
+              <label for="Nazwa kategorii">Hasło</label>
+              <input type="password" name="password" class="">
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Remind passsword</button>-->
+            <button  class="btn btn-primary">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+    <?php
+}
+?>
 <!-- Bootstrap core JavaScript -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
