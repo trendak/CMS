@@ -38,6 +38,8 @@ if (isset($_GET['logout']) == 1) {
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
 
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +47,7 @@ if (isset($_GET['logout']) == 1) {
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="index.html">Blog</a>
+    <a class="navbar-brand" href="index.php?">Blog</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
@@ -58,7 +60,7 @@ if (isset($_GET['logout']) == 1) {
               ?>
 
             <li class="nav-item">
-              <a class="nav-link" href="?p=title"><?php echo $page['title']; ?></a>
+              <a class="nav-link" href="?v=page&title=<?php echo $page['title']  ?>"><?php echo $page['title']; ?></a>
             </li>
               <?php
           }
@@ -141,7 +143,7 @@ if (isset($_GET['logout']) == 1) {
 
 <?php
 
-if(!(isset($_SESSION['login'])) && (!($_GET['v'] == 'register'))) {
+if(!(isset($_SESSION['login'])) && @(!($_GET['v'] == 'register'))) {
     ?>
   <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
        aria-hidden="true">

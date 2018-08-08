@@ -30,7 +30,7 @@ $categories = $result->fetchAll();
         </div>
         <div class="form-group">
           <label>Post Body</label>
-          <textarea name="body" class="form-control" placeholder="Page Body"></textarea>
+          <input name="body" class="form-control" placeholder="Page Body"></input>
         </div>
         <div class="checkbox" >
           <label>

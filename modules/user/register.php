@@ -1,6 +1,5 @@
 <?php
 
-
 if (isset($_POST['login'])) {
 
     $register = true;
@@ -98,9 +97,11 @@ if (isset($_POST['login'])) {
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Register</h5>
+              <a href="index.php?">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
+              </a>
             </div>
             <form method="POST">
                 <div class="modal-body text-right">

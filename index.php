@@ -53,6 +53,6 @@ if (isset($_GET['logout']) == 1) {
     if (isset($_SESSION['admin'])){
         $_SESSION['admin'] = false;
     }
-    header('location: index.php');
+    header('refresh: 1;');
 }
 ?>
