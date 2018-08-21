@@ -6,8 +6,6 @@ session_start();
 ?>
 
 <?php
-if($_SESSION['login'])
-{
 if (array_key_exists('v', $_GET)) {
 	$module = $_GET['v'];
 } else {
@@ -57,5 +55,4 @@ if (isset($_GET['logout']) == 1) {
     }
     header('refresh: 1;');
 }
-
 ?>

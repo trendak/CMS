@@ -29,7 +29,7 @@ if (isset($_GET['logout']) == 1) {
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-
+<!--  <link href="css/style.css" rel="stylesheet">-->
   <!-- Custom fonts for this template -->
   <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>

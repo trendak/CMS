@@ -132,7 +132,10 @@ body{
   padding:30px;
   margin-top:30px;
 }
-
+.centerform{
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {

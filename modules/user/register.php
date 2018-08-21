@@ -29,7 +29,7 @@ if (isset($_POST['login'])) {
 
     if ((filter_var($emailB, FILTER_VALIDATE_EMAIL)==false) || ($emailB!=$email))
     {
-        $wszystko_OK=false;
+        $register=false;
         $_SESSION['e_email']="Provide a valid email address";
     }
     $result = $pdo->prepare('SELECT id FROM users WHERE email = :email');
