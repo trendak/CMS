@@ -66,7 +66,7 @@ if (isset($_GET['logout']) == 1) {
           }
           if (isset($_SESSION['login']))
           {
-            echo '<li class="nav-item"> <a href="" class="nav-link">' . $_SESSION['login'] . '</a></li>';
+            echo '<li class="nav-item"> <a href="?v=profile" class="nav-link">' . $_SESSION['login'] . '</a></li>';
               echo '<li class="nav-item"> <a href="?logout=1"" class="nav-link">Wyloguj się</a></li>';
           }
           else{

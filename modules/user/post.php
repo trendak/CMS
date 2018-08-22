@@ -74,7 +74,7 @@ header('refresh: 1;');
                             ?>
                             <li class="media">
                                 <a href="#" class="pull-left">
-                                    <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+                                    <img src="uploads/<?php echo $comment['photo'] ?>" alt="" class="img-circle">
                                 </a>
                                 <div class="media-body">
                                 <span class="text-muted pull-right">
