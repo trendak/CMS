@@ -68,13 +68,15 @@ if (isset($_POST['login'])) {
     }
     if ($register)
     {
-      $result = $pdo->prepare('INSERT INTO users (login, email, password, last_login_date, last_ip) VALUES(:login, :email, :password, :last_login_date, :last_ip)');
+    $defaultimg = 'default.png';
+      $result = $pdo->prepare('INSERT INTO users (login, email, password, last_login_date, last_ip, photo) VALUES(:login, :email, :password, :last_login_date, :last_ip, :photo)');
       $result->bindParam(':login', $login);
       $result->bindParam(':email', $email);
       $result->bindParam(':password', $passwordhash);
         $data = date('Y-m-d');
       $result->bindParam(':last_login_date', $data);
       $result->bindParam(':last_ip', $_SERVER['REMOTE_ADDR']);
+        $result->bindParam(':photo', $defaultimg);
       $result->execute();
         $_SESSION['loged'] = true;
         $_SESSION['login'] = $login;
