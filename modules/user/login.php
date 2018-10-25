@@ -1,7 +1,9 @@
 <?php
 
-if (isset($_SESSION['error']))
-unset($_SESSION['error']);
+if (isset($_SESSION['error'])) {
+	unset($_SESSION['error']);
+}
+
 if (isset($_POST['login']) && isset($_POST['password'])) {
 	$login = $_POST['login'];
 	$password = $_POST['password'];
@@ -19,8 +21,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 	if ($login) {
 		$_SESSION['loged'] = true;
 		$_SESSION['login'] = $login['login'];
-		if ($login['admin'])
-		{
+		if ($login['admin']) {
 			$_SESSION['admin'] = true;
 		}
 		unset($_SESSION['error']);
@@ -31,8 +32,8 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 		$result->bindParam(':last_ip', $_SERVER['REMOTE_ADDR']);
 		$result->bindParam(':id', $login['id']);
 		$result->execute();
-    //licznik stron aktualizowany przy lgoowaniu
-      howManyRecords();
+		//licznik stron aktualizowany przy lgoowaniu
+		howManyRecords();
 
 	} else {
 		$_SESSION['error'] = '<span style="color:red">Nieprawidłowy login lub hasło!</span>';

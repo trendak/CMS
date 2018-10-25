@@ -1,14 +1,14 @@
 <?php
 if (isset($_POST['pagetitle'])) {
-$published = isset($_POST['pagepublished']) ? 1 : 0;
-$result = $pdo->prepare('INSERT INTO pages (title, body, published, meta_description) VALUES (:title, :body, :published, :meta_description)');
-$result->bindParam(':title', $_POST['pagetitle']);
-$result->bindParam(':body', $_POST['editor1']);
-$result->bindParam(':published', $published);
-$result->bindParam(':meta_description', $_POST['pagemeta_description']);
-$result->execute();
-$_SESSION['communique'] = 'the page has been added';
-howManyRecords();
+	$published = isset($_POST['pagepublished']) ? 1 : 0;
+	$result = $pdo->prepare('INSERT INTO pages (title, body, published, meta_description) VALUES (:title, :body, :published, :meta_description)');
+	$result->bindParam(':title', $_POST['pagetitle']);
+	$result->bindParam(':body', $_POST['editor1']);
+	$result->bindParam(':published', $published);
+	$result->bindParam(':meta_description', $_POST['pagemeta_description']);
+	$result->execute();
+	$_SESSION['communique'] = 'the page has been added';
+	howManyRecords();
 }
 ?>
 

@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dd56a8f-22f2-485e-822d-cac6b89aaa4c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/php_cms_001.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/admin/add_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/admin/add_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/admin/add_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/admin/add_post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/admin/categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/admin/categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/admin/delete_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/admin/delete_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/admin/delete_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/admin/delete_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/user/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/user/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/user/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/user/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/user/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.jar" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,38 +39,41 @@
     <session id="-453070851">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.102" value="1" />
+          <entry key="project.open.time.118" value="1" />
+          <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.88" value="1" />
           <entry key="project.open.time.91" value="2" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="23" />
-          <entry key="php" value="4641" />
+          <entry key="php" value="4682" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="23" />
-          <entry key="PHP" value="4641" />
+          <entry key="PHP" value="4682" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="php" value="32" />
+          <entry key="php" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Blade" value="3" />
           <entry key="CSS" value="3" />
-          <entry key="PHP" value="29" />
+          <entry key="PHP" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -77,8 +88,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+            <state relative-caret-position="256">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/user/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -86,17 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/user/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1536">
-              <caret line="96" column="48" selection-start-line="96" selection-start-column="48" selection-end-line="96" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/layouts/user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="64" />
+            <state relative-caret-position="201">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -119,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/user/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+            <state relative-caret-position="320">
+              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -131,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/user/post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1216">
-              <caret line="76" column="73" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+            <state relative-caret-position="1184">
+              <caret line="74" column="73" selection-start-line="74" selection-start-column="73" selection-end-line="74" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -190,7 +201,6 @@
         <option value="$PROJECT_DIR$/modules/edit_post.php" />
         <option value="$PROJECT_DIR$/modules/categories.php" />
         <option value="$PROJECT_DIR$/modules/login.php" />
-        <option value="$PROJECT_DIR$/modules/user/home.php" />
         <option value="$PROJECT_DIR$/modules/register.php" />
         <option value="$PROJECT_DIR$/modules/user/register" />
         <option value="$USER_HOME$/Desktop/kurs_php3/koniec pracy - stan po odc 3/osadnicy/rejestracja.php" />
@@ -206,6 +216,7 @@
         <option value="$PROJECT_DIR$/modules/user/post.php" />
         <option value="$PROJECT_DIR$/layouts/admin.php" />
         <option value="$PROJECT_DIR$/modules/user/register.php" />
+        <option value="$PROJECT_DIR$/modules/user/home.php" />
       </list>
     </option>
   </component>
@@ -230,7 +241,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,9 +305,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -370,18 +382,21 @@
       <workItem from="1533889657792" duration="3010000" />
       <workItem from="1534407518267" duration="14773000" />
       <workItem from="1534770799883" duration="28491000" />
-      <workItem from="1534931957470" duration="166000" />
+      <workItem from="1534931957470" duration="2323000" />
+      <workItem from="1535013109878" duration="699000" />
+      <workItem from="1535014294705" duration="2460000" />
+      <workItem from="1535540022661" duration="1043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165323000" />
+    <option name="totallyTimeSpent" value="171682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25189108" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2632375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -400,7 +415,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.329429" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3290469" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,13 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/user/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/user/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -565,24 +573,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/user/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1536">
-          <caret line="96" column="48" selection-start-line="96" selection-start-column="48" selection-end-line="96" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/layouts/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="64" />
+        <state relative-caret-position="224">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -600,10 +594,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/user/post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="76" column="73" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+        <state relative-caret-position="1184">
+          <caret line="74" column="73" selection-start-line="74" selection-start-column="73" selection-end-line="74" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -624,10 +625,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/user/register.php">
+    <entry file="file://$PROJECT_DIR$/modules/user/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+        <state relative-caret-position="201">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
         </state>
       </provider>
     </entry>

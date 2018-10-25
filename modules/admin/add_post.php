@@ -10,7 +10,7 @@ if (isset($_POST['title'])) {
 	$result->bindParam(':meta_description', $_POST['meta_description']);
 	$result->execute();
 	$_SESSION['communique'] = 'Post został dodany';
-    howManyRecords();
+	howManyRecords();
 }
 $result = $pdo->query('SELECT `id`, `name` FROM `categories`');
 $categories = $result->fetchAll();
